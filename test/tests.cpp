@@ -23,7 +23,7 @@ TEST(CircleTest, NullSetRadius2) {
     EXPECT_ANY_THROW(c.setRadius(0.0));
 }
 TEST(CircleTest, CorrectSetRadius) {
-    Circle c = Circle(2.0);
+    Circle c = Circle(3.0);
     EXPECT_NEAR(c.getRadius(), 3.0, EPS);
 }
 
@@ -55,7 +55,7 @@ TEST(CircleTest, LargeSetRadius) {
 TEST(CircleTest, LargeSetFerence) {
     Circle c = Circle(1.0);
     c.setFerence(5000.0);
-    EXPECT_NEAR(c.getFerence(), 3000.0, EPS);
+    EXPECT_NEAR(c.getFerence(), 5000.0, EPS);
 }
 TEST(CircleTest, LargeSetArea) {
     Circle c = Circle(1.0);
