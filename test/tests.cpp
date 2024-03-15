@@ -75,7 +75,7 @@ TEST(RopeTaskTest, CorrectLength) {
 
 TEST(PoolTaskTest, PoolTask) {
     EXPECT_NEAR(
-        swimmingPoolTask(3.0, 1.0, 1000, 2000), 23000 * PI, EPS);
+        poolTask(3.0, 1.0, 1000, 2000), 23000 * PI, EPS);
 }
 TEST(PoolTaskTest, NegativePoolRadius) {
     EXPECT_THROW(poolTask
