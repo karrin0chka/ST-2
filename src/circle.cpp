@@ -1,8 +1,9 @@
 // Copyright 2024 Tushentsova Karina
 
 #include <cstdint>
-#include "circle.h"
 #include <stdexcept>
+#include <cmath>
+#include "circle.h"
 
 const double PI = 3.14159;
 
@@ -32,7 +33,7 @@ void Circle::setFerence(double ference) {
         throw std::invalid_argument("ference");
     }
     Circle::ference = ference;
-    Circle::radius = Circle::ference * PI * 0.5;
+    Circle::radius = Circle::ference / (PI * 2);
     Circle::area = Circle::radius * Circle::radius * PI;
 }
 
@@ -41,7 +42,7 @@ void Circle::setArea(double area) {
         throw std::invalid_argument("area");
     }
     Circle::area = area;
-    Circle::radius = sqrt(Circle::area * PI);
+    Circle::radius = sqrt(Circle::area / PI);
     Circle::ference = 2.0 * PI * Circle::radius;
 }
 
