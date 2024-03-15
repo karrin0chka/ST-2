@@ -8,17 +8,17 @@
 const double PI = 3.14159;
 const double EPS = 1e-6;
 
-TEST(CircleTest, NegativeSetRadius) {
+TEST(CircleTest, NegativeSetRadius1) {
     EXPECT_ANY_THROW(Circle(-10.0));
 }
-TEST(CircleTest, NegativeSetRadius) {
+TEST(CircleTest, NegativeSetRadius2) {
     Circle c = Circle(5.0);
     EXPECT_ANY_THROW(c.setRadius(-3.0));
 }
-TEST(CircleTest, NullSetRadius) {
+TEST(CircleTest, NullSetRadius1) {
     EXPECT_ANY_THROW(Circle(0.0));
 }
-TEST(CircleTest, NullSetRadius) {
+TEST(CircleTest, NullSetRadius2) {
     Circle c = Circle(5.0);
     EXPECT_ANY_THROW(c.setRadius(0.0));
 }
